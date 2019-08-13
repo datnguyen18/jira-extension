@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Jira Extension",
+  "description": "Tool for Jira users",
+  "version": "0.1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://softqware.atlassian.net/browse/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
